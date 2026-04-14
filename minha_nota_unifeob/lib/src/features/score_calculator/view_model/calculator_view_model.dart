@@ -26,8 +26,30 @@ class CalculatorViewModel extends ChangeNotifier {
         atitudinal2: _atitudinal2,
       );
 
+  // --- Lógica de Projeção Equitativa ---
+  
+  /// Calcula a sugestão de notas para o B2 baseada na necessidade do aluno.
+  /// Divide o esforço proporcionalmente entre os pesos de cada atividade.
+  Map<String, double> get distribuicaoIdealB2 {
+    double falta = score.quantoFaltaParaPassar();
+    
+    // Se o aluno já passou ou precisa de 0, retornamos tudo zerado
+    if (falta <= 0) return {};
+
+    // O B2 total vale 10.0 pontos. Calculamos a razão de esforço (0.0 a 1.0).
+    // Se falta 7.0, a razão é 0.7 (ele precisa de 70% de cada nota).
+    double razao = falta / 10.0;
+
+    return {
+      'Prova (P2)': 4.0 * razao,
+      'Validação PI': 1.5 * razao,
+      'Apresentação PI': 1.5 * razao,
+      'AIA 2': 1.5 * razao,
+      'Atitudinal 2': 1.5 * razao,
+    };
+  }
+
   // --- Métodos de Atualização (Setters) ---
-  // Cada método notifica a interface automaticamente ao ser chamado
 
   void updateP1(String value) {
     _p1 = _parseValue(value);
