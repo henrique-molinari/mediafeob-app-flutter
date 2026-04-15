@@ -13,7 +13,7 @@ class CalculatorScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
       appBar: AppBar(
-        title: const Text('Calculadora UNIFEOB'),
+        title: const Text('MédiaFEOB'), // Nome atualizado
         centerTitle: true,
         backgroundColor: const Color(0xFF0D47A1),
         foregroundColor: Colors.white,
@@ -26,7 +26,7 @@ class CalculatorScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Cabeçalho com notas e status individuais
+              // Cabeçalho de Resultados
               RepaintBoundary(child: _buildHeader(viewModel)),
               
               const SizedBox(height: 24),
@@ -47,7 +47,7 @@ class CalculatorScreen extends StatelessWidget {
               ScoreInputField(label: 'AIA 2 (Máx 1.5)', onChanged: viewModel.updateAia2),
               ScoreInputField(label: 'Competência Atit. 2 (Máx 1.5)', onChanged: viewModel.updateAtitudinal2),
               
-              const SizedBox(height: 20),
+              const SizedBox(height: 32),
             ],
           ),
         ),
@@ -91,6 +91,30 @@ class CalculatorScreen extends StatelessWidget {
           _statusRow("2º Bimestre:", vm.b2Message, vm.b2Color),
           const SizedBox(height: 10),
           _statusRow("Semestre:", vm.semesterMessage, vm.semesterColor, isBold: true),
+          
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 12),
+            child: Divider(color: Colors.white10, thickness: 1),
+          ),
+          
+          // Campo de Pontos Necessários
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                "Falta para passar:",
+                style: TextStyle(color: Color(0xFFFFD700), fontSize: 15, fontWeight: FontWeight.w500),
+              ),
+              Text(
+                vm.pontosNecessariosMsg.toUpperCase(),
+                style: const TextStyle(
+                  color: Color(0xFFFFD700), 
+                  fontSize: 15, 
+                  fontWeight: FontWeight.w900, // Corrigido para w900
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

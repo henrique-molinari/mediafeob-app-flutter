@@ -32,6 +32,16 @@ class CalculatorViewModel extends ChangeNotifier {
     aia2: _aia2,
     atitudinal2: _atitudinal2,
   );
+  String get pontosNecessariosMsg {
+    double falta = score.quantoFaltaParaPassar();
+    if (falta <= 0) {
+      return "Meta atingida!";
+    } else if (falta > 10) {
+      return "Necessário > 10.0 (Recuperação)";
+    } else {
+      return "${falta.toStringAsFixed(1)} pontos";
+    }
+  }
 
   Map<String, double> get distribuicaoIdealB2 {
     double falta = score.quantoFaltaParaPassar();
