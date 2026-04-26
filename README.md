@@ -93,6 +93,6 @@ Nota: Caso queira apenas instalar o aplicativo no seu telemóvel sem precisar de
 
 ---
 
-**Desenvolvido por Henrique Molinari.**
+## **Desenvolvido por Henrique Molinari.**
 
 *Este projeto é uma ferramenta de apoio acadêmico independente.*
