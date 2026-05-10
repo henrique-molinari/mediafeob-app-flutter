@@ -41,7 +41,7 @@ O projeto adota o padrão **MVVM (Model-View-ViewModel)** com **Clean Architectu
 
 ---
 
-## 📊 Composição das Notas (B2 Atualizado)
+## Composição das Notas (B2 Atualizado)
 
 O sistema respeita a distribuição oficial de pontos da instituição:
 
