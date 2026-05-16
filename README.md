@@ -79,7 +79,7 @@ O sistema respeita a distribuição oficial de pontos da instituição:
     ```
 
 3.  **Build Otimizado (Versão Leve):**
-    Para gerar o APK de aproximadamente 15-20MB:
+    Para gerar o APK de aproximadamente 20MB:
     ```bash
     flutter build apk --release --split-per-abi
     ```
