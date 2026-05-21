@@ -13,7 +13,7 @@ Customizado para as regras de negócio da instituição, o app fornece feedback 
 * **Cálculo em Tempo Real:** Resultados atualizados instantaneamente conforme as notas são inseridas.
 * **Status Detalhado:** Visão individual do status por bimestre (B1, B2) e média final do semestre.
 * **Calculadora Inversa:** Exibe os pontos exatos necessários no 2º bimestre para aprovação direta.
-* **Interface Otimizada:** Design azul institucional focado em legibilidade e performance.
+* **Interface Otimizada:** Design azul institucional focado em legibilidade e performance
 
 ---
 
