@@ -1,7 +1,7 @@
 
 # MédiaFEOB 🎓
 
-O **MédiaFEOB** é uma solução mobile desenvolvida para auxiliar os estudantes dos cursos de tecnologia da **UNIFEOB** a gerirem seu desempenho acadêmico com precisão. O aplicativo automatiza o cálculo das médias e oferece uma funcionalidade preditiva ("Quanto falta?"), eliminando a necessidade de planilhas manuais.
+O **MédiaFEOB** é uma solução mobile simples, desenvolvida para auxiliar os estudantes dos cursos de tecnologia da **UNIFEOB** (Ciência da Computação e Análise e Desenvolvimento de Sistemas) a gerirem seu desempenho acadêmico com precisão. O aplicativo automatiza o cálculo das médias e oferece uma funcionalidade preditiva ("Quanto falta?"), eliminando a necessidade de planilhas manuais.
 
 ---
 
